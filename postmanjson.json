@@ -1,98 +1,300 @@
 {
-    "info": {
-      "_postman_id": "3f5f090f-4b3d-4f63-a4b5-b3c3f00a52e3",
-      "name": "PubSubSystem Requests",
-      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-    },
-    "item": [
-      {
-        "name": "Subscribe to Topic",
-        "request": {
-          "method": "POST",
-          "header": [],
-          "body": {
-            "mode": "raw",
-            "raw": "{\n\t\"topicId\": \"topic1\",\n\t\"subscriberId\": \"subscriber1\"\n}"
-          },
-          "url": {
-            "raw": "http://localhost:3000/subscribe",
-            "protocol": "http",
-            "host": [
-              "localhost"
-            ],
-            "port": "3000",
-            "path": [
-              "subscribe"
-            ]
-          }
-        },
-        "response": []
-      },
-      {
-        "name": "Notify Subscribers of Topic",
-        "request": {
-          "method": "POST",
-          "header": [],
-          "body": {
-            "mode": "raw",
-            "raw": "{\n\t\"topicId\": \"topic1\"\n}"
-          },
-          "url": {
-            "raw": "http://localhost:3000/notify",
-            "protocol": "http",
-            "host": [
-              "localhost"
-            ],
-            "port": "3000",
-            "path": [
-              "notify"
-            ]
-          }
-        },
-        "response": []
-      },
-      {
-        "name": "Unsubscribe from Topic",
-        "request": {
-          "method": "POST",
-          "header": [],
-          "body": {
-            "mode": "raw",
-            "raw": "{\n\t\"topicId\": \"topic1\",\n\t\"subscriberId\": \"subscriber1\"\n}"
-          },
-          "url": {
-            "raw": "http://localhost:3000/unsubscribe",
-            "protocol": "http",
-            "host": [
-              "localhost"
-            ],
-            "port": "3000",
-            "path": [
-              "unsubscribe"
-            ]
-          }
-        },
-        "response": []
-      },
-      {
-        "name": "Test PubSubSystem",
-        "request": {
-          "method": "GET",
-          "header": [],
-          "url": {
-            "raw": "http://localhost:3000/test",
-            "protocol": "http",
-            "host": [
-              "localhost"
-            ],
-            "port": "3000",
-            "path": [
-              "test"
-            ]
-          }
-        },
-        "response": []
-      }
-    ]
-  }
-  
+	"info": {
+		"_postman_id": "9f072676-309d-43d4-9062-355f30080b29",
+		"name": "PubSubSystem GET Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29327645"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/subscribe/topic_2/subscriber_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/subscribe/topic_2/subscriber_2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscribe",
+						"topic_2",
+						"subscriber_2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/subscribe/topic_2/subscriber_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/subscribe/topic_2/subscriber_3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscribe",
+						"topic_2",
+						"subscriber_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/subscribe/%20/subscriber_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/subscribe/%20/subscriber_1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscribe",
+						"%20",
+						"subscriber_1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/subscribe/topic_1/%20",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/subscribe/topic_1/%20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscribe",
+						"topic_1",
+						"%20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/subscribe/topic_1/subscriber_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/subscribe/topic_1/subscriber_1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscribe",
+						"topic_1",
+						"subscriber_1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/notify/topic_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/notify/topic_1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notify",
+						"topic_1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/notify/topic_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/notify/topic_3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notify",
+						"topic_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/notify/topic_2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/notify/topic_2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notify",
+						"topic_2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/notify/%20",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/notify/%20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"notify",
+						"%20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/unsubscribe/topic_2/subscriber_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/unsubscribe/topic_2/subscriber_3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"unsubscribe",
+						"topic_2",
+						"subscriber_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/unsubscribe/%20/subscriber_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/unsubscribe/%20/subscriber_3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"unsubscribe",
+						"%20",
+						"subscriber_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/unsubscribe/topic_1/%20",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/unsubscribe/topic_1/%20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"unsubscribe",
+						"topic_1",
+						"%20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/unsubscribe/topic_1/subscriber_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/unsubscribe/topic_1/subscriber_3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"unsubscribe",
+						"topic_1",
+						"subscriber_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/unsubscribe/topic_2/subscriber_5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/unsubscribe/topic_2/subscriber_5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"unsubscribe",
+						"topic_2",
+						"subscriber_5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

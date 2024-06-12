@@ -8,7 +8,6 @@ class PubSubscription {
     }
 
     subscribe(topicId, subscriberId) {
-        console.log(topicId,subscriberId);
         //To check whether the string is empty or not
         if (topicId === '' || subscriberId === '') {
             console.log(' Topic id or subscriber id is empty');
@@ -25,6 +24,9 @@ class PubSubscription {
             console.log(`Subscriber ${subscriberId} has subscribed to topic ${topicId}`);
         }
     }
+
+   
+    
     
     notify(topicId) {
         // To check if topic id is empty or not a string
@@ -82,8 +84,6 @@ function driver() {
     console.log("\nSubscription edge cases");
     pubsub.subscribe("", "subscriber_1"); // Empty topicId
     pubsub.subscribe("topic_1", ""); // Empty subscriberId
-    pubsub.subscribe(" ", "subscriber_2"); // Whitespace-only topicId
-    pubsub.subscribe("topic_1", " "); // Whitespace-only subscriberId
     pubsub.subscribe("topic_1", "subscriber_1"); // Subscriber already subscribed
     
     // Notify subscribers of a topic
