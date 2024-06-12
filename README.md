@@ -15,21 +15,21 @@ The provided **postmanjson.json** file contains a collection of HTTP requests fo
 ### Edge cases:
 **1.	Subscription:** 
 Test cases cover for subscribe are as below
--Empty Topic Id
--Empty Subscriber Id
--Duplicate Subscription
+- Empty Topic Id
+- Empty Subscriber Id
+- Duplicate Subscription
 
 **2.	Notification:**
 Test cases cover for notification are as below
--Empty Topic Id
--Non existing topic
+- Empty Topic Id
+- Non existing topic
 
 **3.	Unsubscription:**
 Test cases cover for unsubscription are as below
--Empty Topic Id
--Empty Subscription ID
--Non existing topic
--Non existent subscriber
+- Empty Topic Id
+- Empty Subscription ID
+- Non existing topic
+- Non existent subscriber
 
 ### Output for driver code:
 ![output for driver code](Images/image.png)
