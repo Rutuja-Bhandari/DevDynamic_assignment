@@ -68,7 +68,7 @@ class PubSubscription {
             console.log(`Subscriber ${subscriberId} is not subscribed to topic ${topicId}`);
         }
     }
-    
+
 }
 
 function driver() {

@@ -6,26 +6,23 @@ const app = express();
 app.use(bodyParser.json());
 
 const pubsub = new PubSubSystem();
-
-app.post('/subscribe', (req, res) => {
-    console.log(req.body);
-    const { topicId, subscriberId } = req.body;
-    pubsub.subscribe(topicId, subscriberId);
-    res.send(`Subscriber ${subscriberId} has subscribed to topic ${topicId}`);
-});
-
-app.post('/notify', (req, res) => {
-    const { topicId } = req.body;
+app.get('/notify/:topicId', (req, res) => {
+    const { topicId } = req.params;
     pubsub.notify(topicId);
     res.send(`Notifying subscribers of topic ${topicId}`);
 });
 
-app.post('/unsubscribe', (req, res) => {
-    const { topicId, subscriberId } = req.body;
+app.get('/unsubscribe/:topicId/:subscriberId', (req, res) => {
+    const { topicId, subscriberId } = req.params;
     pubsub.unsubscribe(topicId, subscriberId);
     res.send(`Subscriber ${subscriberId} has unsubscribed from topic ${topicId}`);
 });
 
+app.get('/subscribe/:topicId/:subscriberId', (req, res) => {
+    const { topicId, subscriberId } = req.params;
+    pubsub.subscribe(topicId, subscriberId);
+    res.send(`Subscriber ${subscriberId} has subscribed to topic ${topicId}`);
+});
 
 
 const PORT = process.env.PORT || 3000;
