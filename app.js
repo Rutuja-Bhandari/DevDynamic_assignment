@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 const pubsub = new PubSubSystem();
 
 app.post('/subscribe', (req, res) => {
+    console.log(req.body);
     const { topicId, subscriberId } = req.body;
     pubsub.subscribe(topicId, subscriberId);
     res.send(`Subscriber ${subscriberId} has subscribed to topic ${topicId}`);
@@ -25,10 +26,7 @@ app.post('/unsubscribe', (req, res) => {
     res.send(`Subscriber ${subscriberId} has unsubscribed from topic ${topicId}`);
 });
 
-app.get('/test', (req, res) => {
-    driver(); 
-    res.send('Testing the PubSubSystem');
-});
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

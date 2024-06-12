@@ -8,9 +8,10 @@ class PubSubscription {
     }
 
     subscribe(topicId, subscriberId) {
+        console.log(topicId,subscriberId);
         //To check whether the string is empty or not
-        if (topicId.trim() === '' || subscriberId.trim() === '') {
-            console.log('Error: Topic id or subscriber id is empty');
+        if (topicId === '' || subscriberId === '') {
+            console.log(' Topic id or subscriber id is empty');
             return;
         }
         if (!this.topics[topicId]) {
@@ -24,11 +25,11 @@ class PubSubscription {
             console.log(`Subscriber ${subscriberId} has subscribed to topic ${topicId}`);
         }
     }
-
+    
     notify(topicId) {
         // To check if topic id is empty or not a string
         if (!topicId || typeof topicId !== 'string') {
-            console.log('Error: Invalid or empty topicId.');
+            console.log(' Invalid or empty topicId.');
             return;
         }
         // Check whether it has subscriber or not
@@ -49,13 +50,13 @@ class PubSubscription {
     unsubscribe(topicId, subscriberId) {
         // Check if topicId or subscriberId is empty or invalid
         if (!topicId.trim() || !subscriberId.trim()) {
-            console.log('Error: Topic id or subscriber id is empty');
+            console.log(' Topic id or subscriber id is empty');
             return;
         }
     
         // Check if the topicId exists in topics
         if (!this.topics[topicId]) {
-            console.log(`Error: Topic ${topicId} does not exist`);
+            console.log(` Topic ${topicId} does not exist`);
             return;
         }
     
